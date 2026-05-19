@@ -1,4 +1,4 @@
-# @gitbank/sdk
+# @gitbank-agent/sdk
 
 TypeScript SDK for [Gitbank](https://gitbank.io) — the Web3 payment and project management layer built on Base L2 via GitHub.
 
@@ -11,11 +11,11 @@ TypeScript SDK for [Gitbank](https://gitbank.io) — the Web3 payment and projec
 ## Install
 
 ```bash
-npm install @gitbank/sdk
+npm install @gitbank-agent/sdk
 # or
-pnpm add @gitbank/sdk
+pnpm add @gitbank-agent/sdk
 # or
-yarn add @gitbank/sdk
+yarn add @gitbank-agent/sdk
 ```
 
 Requires **Node.js 18+**. No external runtime dependencies — only Node built-ins.
@@ -25,7 +25,7 @@ Requires **Node.js 18+**. No external runtime dependencies — only Node built-i
 ## Quick Start
 
 ```typescript
-import { GitbankClient } from "@gitbank/sdk";
+import { GitbankClient } from "@gitbank-agent/sdk";
 
 const client = new GitbankClient({
   baseUrl: "https://gitbank.io",   // default
@@ -172,7 +172,7 @@ const { status } = await client.healthz();
 Connect to the [Gitlawb](https://gitlawb.com) decentralized git network.
 
 ```typescript
-import { GitlawbClient } from "@gitbank/sdk";
+import { GitlawbClient } from "@gitbank-agent/sdk";
 
 const gl = new GitlawbClient({
   node: "https://node.gitlawb.com",    // or GITLAWB_NODE env var
@@ -219,7 +219,7 @@ const content = await gl.readFile("my-project", "src/index.ts", "main");
 Generate and manage Ed25519 decentralized identifiers (did:key spec).
 
 ```typescript
-import { generateDID, loadDID, clearDID } from "@gitbank/sdk";
+import { generateDID, loadDID, clearDID } from "@gitbank-agent/sdk";
 
 // Generate a new Ed25519 DID keypair
 // Saved to ~/.gitbank/did/identity.json (mode 0600)
@@ -247,7 +247,7 @@ The keypair is stored at `~/.gitbank/did/identity.json` with `0600` permissions 
 Build AI agent integrations with 23 ready-made tools covering all Gitbank and Gitlawb operations.
 
 ```typescript
-import { GitbankClient, GitlawbClient, buildGitbankMCPTools } from "@gitbank/sdk";
+import { GitbankClient, GitlawbClient, buildGitbankMCPTools } from "@gitbank-agent/sdk";
 
 const gitbank = new GitbankClient({ cookie: savedCookie });
 const gitlawb = new GitlawbClient();
@@ -335,7 +335,7 @@ import {
   GitbankAuthError,
   GitbankNotFoundError,
   GitbankNetworkError,
-} from "@gitbank/sdk";
+} from "@gitbank-agent/sdk";
 
 try {
   await client.getBalance();
