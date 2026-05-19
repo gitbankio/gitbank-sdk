@@ -1,0 +1,42 @@
+{
+  "name": "@gitbank-agent/sdk",
+  "version": "0.1.1",
+  "description": "TypeScript SDK for Gitbank — Web3 payments and project management on Base L2 via GitHub. Vault operations, bounties, Gitlawb decentralized git, DID identity, and MCP tools.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Gitbank <hello@gitbank.io>",
+  "homepage": "https://gitbank.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitbankio/gitbank-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/gitbankio/gitbank-sdk/issues"
+  },
+  "keywords": [
+    "gitbank", "web3", "base-l2", "ethereum", "github",
+    "vault", "bounty", "gitlawb", "did", "mcp", "sdk", "typescript"
+  ],
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "engines": { "node": ">=18.0.0" },
+  "scripts": {
+    "build": "node ./build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "node ./build.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "esbuild": "^0.27.0",
+    "typescript": "^5.0.0"
+  }
+}
