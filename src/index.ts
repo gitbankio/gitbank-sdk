@@ -28,8 +28,11 @@ export type {
   GitlawbRepo,
   GitlawbIdentity,
   GitlawbPR,
+  GitlawbPRReview,
   GitlawbIssue,
   GitlawbNodeStatus,
+  GitlawbTrustScore,
+  GitlawbRegistration,
 } from "./gitlawb.js";
 export type { DIDDocument } from "./did.js";
 export type { MCPTool, MCPToolResult } from "./mcp-tools.js";
